@@ -15,9 +15,9 @@ fn main() {
 }
 
 // Should not take ownership
-fn get_char(data: &String) -> char {
+fn get_char(data: &str) -> char {
     data.chars().last().unwrap()
-}
+} //Rust 使用字符串传入参数时，如果不是需要修改传入的 String，就尽量设置参数类型为 &str，其中&String 会被自动解引用成&str
 
 // Should take ownership
 fn string_uppercase(mut data: String) {

@@ -11,7 +11,7 @@ struct ColorClassicStruct {
     blue : i32 ,
 }
 
-struct ColorTupleStruct(i32, i32, i32);
+struct ColorTupleStruct(u8, u8, u8);
 
 #[derive(Debug)]
 struct UnitLikeStruct;
