@@ -11,7 +11,7 @@ fn trim_me(input: &str) -> String {
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There's multiple ways to do this!
     //方法一： format!("{} world!",input.to_string()) 字符串合并  简单的字符串拼接（不涉及内插），不建议使用format宏，性能很差。而且这种方式涉及多次内存分配。
-    //方法二： input.to_owned() + " world!" 
+    //方法二： input.to_owned() + " world!"
     //性能最佳方法：
     const WORLD: &str = " world!";
     let mut str = String::with_capacity(input.len() + WORLD.len());
@@ -46,7 +46,13 @@ mod tests {
 
     #[test]
     fn replace_a_string() {
-        assert_eq!(replace_me("I think cars are cool"), "I think balloons are cool");
-        assert_eq!(replace_me("I love to look at cars"), "I love to look at balloons");
+        assert_eq!(
+            replace_me("I think cars are cool"),
+            "I think balloons are cool"
+        );
+        assert_eq!(
+            replace_me("I love to look at cars"),
+            "I love to look at balloons"
+        );
     }
 }

@@ -14,7 +14,6 @@
 // Execute `rustlings hint hashmaps2` or use the `hint` watch subcommand for a
 // hint.
 
-
 use std::collections::HashMap;
 
 #[derive(Hash, PartialEq, Eq)]
@@ -40,14 +39,11 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
         // basket. Note that you are not allowed to put any type of fruit that's
         // already present!
         let record: Option<&u32> = basket.get(&fruit);
-        match record  {
+        match record {
             None => {
                 basket.insert(fruit, 3);
             }
-            Some(_) => {
-
-            }
-            
+            Some(_) => {}    
         }
     }
 }

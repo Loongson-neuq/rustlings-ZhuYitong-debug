@@ -3,7 +3,6 @@
 // Execute `rustlings hint enums2` or use the `hint` watch subcommand for a
 // hint.
 
-
 #[derive(Debug)]
 enum Message {
     // TODO: define the different variants used below

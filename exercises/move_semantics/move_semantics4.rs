@@ -7,26 +7,25 @@
 // Execute `rustlings hint move_semantics4` or use the `hint` watch subcommand
 // for a hint.
 
-
 fn main() {
-    let vec = Vec::new();
+    let vec = foo();
 
-    let mut vec = foo(vec0);
+    println!("{} has length {} content `{:?}`", "vec", vec.len(), vec);
 
-    println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
+    let mut vec = vec;
 
-    vec1.push(88);
+    vec.push(88);
 
-    println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
+    println!("{} has length {} content `{:?}`", "vec", vec.len(), vec);
 }
 
-\// `foo()` does NOT take `vec: Vec<i32>` as argument
-fn foo() -> &mut Vec<i32> {
-    let mut vec = ???
+// `foo()` does NOT take `vec: Vec<i32>` as argument
+fn foo() -> Vec<i32> {
+    let mut vec = Vec::new();
 
     vec.push(22);
     vec.push(44);
     vec.push(66);
 
-    ???
+    vec
 }
