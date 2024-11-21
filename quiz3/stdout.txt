@@ -1,0 +1,49 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:16:
+ //
+ // Execute `rustlings hint quiz3` or use the `hint` watch subcommand for a hint.
+ 
+-
+ pub struct ReportCard {
+     pub grade: f32,
+     pub student_name: String,
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:25:
+ 
+ impl ReportCard {
+     pub fn print(&self) -> String {
+-        format!("{} ({}) - achieved a grade of {}",
+-            &self.student_name, &self.student_age, &self.grade)
++        format!(
++            "{} ({}) - achieved a grade of {}",
++            &self.student_name, &self.student_age, &self.grade
++        )
+     }
+ }
+ 
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:38:
+ 
+ impl ReportCard_alphabetical {
+     pub fn print(&self) -> String {
+-        format!("{} ({}) - achieved a grade of {}",
+-            &self.student_name, &self.student_age, &self.grade)
++        format!(
++            "{} ({}) - achieved a grade of {}",
++            &self.student_name, &self.student_age, &self.grade
++        )
+     }
+ }
+ 
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

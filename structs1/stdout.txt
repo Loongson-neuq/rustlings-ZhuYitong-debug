@@ -1,0 +1,28 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:6:
+ // hint.
+ 
+ struct ColorClassicStruct {
+-    red: i32 ,
+-    green: i32 ,
+-    blue: i32 ,
++    red: i32,
++    green: i32,
++    blue: i32,
+ }
+ 
+ struct ColorTupleStruct(u8, u8, u8);
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

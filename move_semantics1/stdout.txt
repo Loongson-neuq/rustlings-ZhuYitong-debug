@@ -1,0 +1,40 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:8:
+ 
+     let mut vec1 = fill_vec(vec0);
+ 
+-    println!(
+-        "{} has length {} content `{:?}`", 
+-        "vec1",
+-        vec1.len(),
+-        vec1
+-    );
++    println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
+ 
+     vec1.push(88);
+ 
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:20:
+-    println!(
+-        "{} has length {} content `{:?}`",
+-        "vec1",
+-        vec1.len(),
+-        vec1
+-    );
++    println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
+ }
+ 
+ fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

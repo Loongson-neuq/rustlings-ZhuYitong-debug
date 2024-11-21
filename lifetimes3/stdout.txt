@@ -1,0 +1,27 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:13:
+ fn main() {
+     let name = String::from("Jill Smith");
+     let title = String::from("Fish Flying");
+-    let book = Book { author: &name, title: &title };
++    let book = Book {
++        author: &name,
++        title: &title,
++    };
+ 
+     println!("{} by {}", book.title, book.author);
+ }
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

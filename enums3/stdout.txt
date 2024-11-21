@@ -1,0 +1,35 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:34:
+         self.quit = true;
+     }
+ 
+-    fn echo(&mut self, s: String) { 
+-        self.message = s 
++    fn echo(&mut self, s: String) {
++        self.message = s
+     }
+ 
+     fn move_position(&mut self, p: Point) {
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:49:
+         // extra parentheses: fn function((t, u, p, l, e))
+         match message {
+             Message::ChangeColor(r, g, b) => self.change_color((r as u8, g as u8, b as u8)), //类型转换,
+-            Message::Move(p) => self.move_position(p),    
++            Message::Move(p) => self.move_position(p),
+             Message::Echo(s) => self.echo(s),
+             Message::Quit => self.quit(),
+         }
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

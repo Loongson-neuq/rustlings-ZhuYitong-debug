@@ -1,0 +1,41 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:7:
+ 
+ struct Rectangle {
+     width: i32,
+-    height: i32
++    height: i32,
+ }
+ 
+ impl Rectangle {
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:16:
+         if width <= 0 || height <= 0 {
+             panic!("Rectangle width and height cannot be negative!")
+         }
+-        Rectangle {width, height}
++        Rectangle { width, height }
+     }
+ }
+ 
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:44:
+     fn negative_height() {
+         // This test should check if program panics when we try to create rectangle with negative height
+         let _rect = Rectangle::new(10, -10);
+-
+     }
+ }
+ 
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

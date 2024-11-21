@@ -1,0 +1,30 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:53:
+     // collection = [{ "variables1": Complete, "from_str": None, ... },
+     //     { "variables2": Complete, ... }, ... ]
+     collection
+-    .iter()
+-    .flat_map(|map| map.values())
+-    .filter(|&&v| v == value)
+-    .count()
++        .iter()
++        .flat_map(|map| map.values())
++        .filter(|&&v| v == value)
++        .count()
+ }
+ 
+ #[cfg(test)]
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

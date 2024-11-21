@@ -1,0 +1,56 @@
+Checking test execution result...
+[!] Test execution result: FAILED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+    Checking format_check v0.1.0 (/home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check)
+warning: unneeded unit return type
+  --> src/lib.rs:29:44
+   |
+29 | fn send_tx(q: Queue, tx: mpsc::Sender<u32>) -> () {
+   |                                            ^^^^^^ help: remove the `-> ()`
+   |
+   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unused_unit
+   = note: `#[warn(clippy::unused_unit)]` on by default
+
+error[E0382]: use of moved value: `tx`
+  --> src/lib.rs:42:19
+   |
+29 | fn send_tx(q: Queue, tx: mpsc::Sender<u32>) -> () {
+   |                      -- move occurs because `tx` has type `std::sync::mpsc::Sender<u32>`, which does not implement the `Copy` trait
+...
+34 |     thread::spawn(move || {
+   |                   ------- value moved into closure here
+35 |         for val in &qc1.first_half {
+   |         -------------------------- inside of this loop
+36 |             println!("sending {:?}", val);
+37 |             tx.send(*val).unwrap();
+   |             -- variable moved due to use in closure
+...
+42 |     thread::spawn(move || {
+   |                   ^^^^^^^ value used here after move
+...
+45 |             tx.send(*val).unwrap();
+   |             -- use occurs due to use in closure
+   |
+help: consider moving the expression out of the loop so it is only moved once
+   |
+35 ~         let mut value = tx.send(*val);
+36 ~         for val in &qc1.first_half {
+37 |             println!("sending {:?}", val);
+38 ~             value.unwrap();
+   |
+
+For more information about this error, try `rustc --explain E0382`.
+warning: `format_check` (lib) generated 1 warning
+error: could not compile `format_check` (lib) due to 1 previous error; 1 warning emitted
+
+[!] Source code format check: FAILED

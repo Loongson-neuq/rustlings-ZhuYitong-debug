@@ -1,0 +1,24 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:11:
+ 
+ use std::string;
+ 
+-pub fn generate_nametag_text(name: String) -> Result<String,String> {
++pub fn generate_nametag_text(name: String) -> Result<String, String> {
+     if name.is_empty() {
+         Err("`name` was empty; it must be nonempty.".into())
+     } else {
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

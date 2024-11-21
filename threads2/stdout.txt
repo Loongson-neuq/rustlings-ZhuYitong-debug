@@ -1,0 +1,23 @@
+Checking test execution result...
+[!] Test execution result: FAILED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+    Checking format_check v0.1.0 (/home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check)
+error: expected expression, found `?`
+  --> src/lib.rs:37:39
+   |
+37 |         println!("jobs completed {}", ???);
+   |                                       ^ expected expression
+
+error: could not compile `format_check` (lib) due to 1 previous error
+
+[!] Source code format check: FAILED

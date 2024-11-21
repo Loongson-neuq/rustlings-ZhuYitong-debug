@@ -1,0 +1,33 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:43:
+             None => {
+                 basket.insert(fruit, 3);
+             }
+-            Some(_) => {}    
++            Some(_) => {}
+         }
+     }
+ }
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:86:
+         let count = basket.values().sum::<u32>();
+         assert!(count > 11);
+     }
+-    
++
+     #[test]
+     fn all_fruit_types_in_basket() {
+         let mut basket = get_fruit_basket();
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

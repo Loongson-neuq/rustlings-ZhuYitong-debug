@@ -1,0 +1,31 @@
+Checking test execution result...
+[!] Test execution result: FAILED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+    Checking format_check v0.1.0 (/home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check)
+error[E0277]: cannot divide `f64` by `usize`
+  --> src/lib.rs:17:11
+   |
+17 |     total / values.len()
+   |           ^ no implementation for `f64 / usize`
+   |
+   = help: the trait `std::ops::Div<usize>` is not implemented for `f64`
+   = help: the following other types implement trait `std::ops::Div<Rhs>`:
+             `&'a f64` implements `std::ops::Div<f64>`
+             `&f64` implements `std::ops::Div<&f64>`
+             `f64` implements `std::ops::Div<&f64>`
+             `f64` implements `std::ops::Div`
+
+For more information about this error, try `rustc --explain E0277`.
+error: could not compile `format_check` (lib) due to 1 previous error
+
+[!] Source code format check: FAILED

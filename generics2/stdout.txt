@@ -1,0 +1,23 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:6:
+ // Execute `rustlings hint generics2` or use the `hint` watch subcommand for a
+ // hint.
+ 
+-
+ struct Wrapper<T> {
+     value: T,
+ }
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

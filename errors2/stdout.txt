@@ -1,0 +1,26 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:26:
+     let cost_per_item = 5;
+ 
+     match item_quantity.parse::<i32>() {
+-        Ok(qty) => Ok(qty * cost_per_item + processing_fee), 
+-        Err(e) => Err(e), 
++        Ok(qty) => Ok(qty * cost_per_item + processing_fee),
++        Err(e) => Err(e),
+     }
+ }
+ 
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

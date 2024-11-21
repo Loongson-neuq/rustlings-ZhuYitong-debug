@@ -1,0 +1,34 @@
+Checking test execution result...
+[!] Test execution result: FAILED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+    Checking format_check v0.1.0 (/home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check)
+error: cannot find macro `my_macro` in this scope
+  --> src/lib.rs:19:5
+   |
+19 |     my_macro!();
+   |     ^^^^^^^^
+   |
+   = help: have you added the `#[macro_use]` on the module/import?
+
+warning: unused macro definition: `my_macro`
+  --> src/lib.rs:11:18
+   |
+11 |     macro_rules! my_macro {
+   |                  ^^^^^^^^
+   |
+   = note: `#[warn(unused_macros)]` on by default
+
+warning: `format_check` (lib) generated 1 warning
+error: could not compile `format_check` (lib) due to 1 previous error; 1 warning emitted
+
+[!] Source code format check: FAILED

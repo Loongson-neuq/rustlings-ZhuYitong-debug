@@ -1,0 +1,42 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:47:
+         let mut input = Cow::from(&slice[..]);
+         match abs_all(&mut input) {
+             // TODO
+-            Cow::Borrowed(_) => Ok(()),     
++            Cow::Borrowed(_) => Ok(()),
+             _ => Err("Expected borrowed value"),
+         }
+     }
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:61:
+         let mut input = Cow::from(slice);
+         match abs_all(&mut input) {
+             // TODO
+-            Cow::Owned(_) => Ok(()), 
++            Cow::Owned(_) => Ok(()),
+             _ => Err("Expected owned value"),
+         }
+     }
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:75:
+         let mut input = Cow::from(slice);
+         match abs_all(&mut input) {
+             // TODO
+-            Cow::Owned(_) => Ok(()), 
++            Cow::Owned(_) => Ok(()),
+             _ => Err("Expected owned value"),
+         }
+     }
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

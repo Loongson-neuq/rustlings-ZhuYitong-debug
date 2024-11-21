@@ -1,0 +1,59 @@
+Checking test execution result...
+[!] Test execution result: FAILED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+
+error: expected expression, found `?`
+  --> /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:28:5
+   |
+28 |     ???
+   |     ^ expected expression
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+    Checking format_check v0.1.0 (/home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check)
+error: expected expression, found `?`
+  --> src/lib.rs:28:5
+   |
+28 |     ???
+   |     ^ expected expression
+
+error[E0599]: no method named `as_ref` found for type parameter `T` in the current scope
+  --> src/lib.rs:15:9
+   |
+14 | fn byte_counter<T>(arg: T) -> usize {
+   |                 - method `as_ref` not found for this type parameter
+15 |     arg.as_ref().as_bytes().len()
+   |         ^^^^^^ method not found in `T`
+   |
+   = help: items from traits can only be used if the type parameter is bounded by the trait
+help: the following trait defines an item `as_ref`, perhaps you need to restrict type parameter `T` with it:
+   |
+14 | fn byte_counter<T: std::convert::AsRef>(arg: T) -> usize {
+   |                  +++++++++++++++++++++
+
+error[E0599]: no method named `as_ref` found for type parameter `T` in the current scope
+  --> src/lib.rs:21:9
+   |
+20 | fn char_counter<T>(arg: T) -> usize {
+   |                 - method `as_ref` not found for this type parameter
+21 |     arg.as_ref().chars().count()
+   |         ^^^^^^ method not found in `T`
+   |
+   = help: items from traits can only be used if the type parameter is bounded by the trait
+help: the following trait defines an item `as_ref`, perhaps you need to restrict type parameter `T` with it:
+   |
+20 | fn char_counter<T: std::convert::AsRef>(arg: T) -> usize {
+   |                  +++++++++++++++++++++
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `format_check` (lib) due to 3 previous errors
+
+[!] Source code format check: FAILED

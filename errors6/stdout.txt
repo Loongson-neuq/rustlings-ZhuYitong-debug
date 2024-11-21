@@ -1,0 +1,23 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:9:
+ // Execute `rustlings hint errors6` or use the `hint` watch subcommand for a
+ // hint.
+ 
+-
+ use std::num::ParseIntError;
+ 
+ // This is a custom error type that we will be using in `parse_pos_nonzero()`.
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED

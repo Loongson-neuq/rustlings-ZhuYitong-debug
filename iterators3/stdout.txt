@@ -1,0 +1,37 @@
+Checking test execution result...
+[!] Test execution result: PASSED
+Checking source code format...
+  Preparing source code for format check...
+  Running format check...
+// =====================================================
+//  Running cargo fmt...
+// =====================================================
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:41:
+ // Desired output: Ok([1, 11, 1426, 3])
+ fn result_with_list() -> Result<Vec<i32>, DivisionError> {
+     let numbers = vec![27, 297, 38502, 81];
+-    numbers.into_iter() 
+-        .map(|n| divide(n, 27)) 
+-        .collect() 
++    numbers.into_iter().map(|n| divide(n, 27)).collect()
+ }
+ // Complete the function and return a value of the correct type so the test
+ // passes.
+Diff in /home/runner/work/rustlings-ZhuYitong-debug/rustlings-ZhuYitong-debug/format_check/src/lib.rs:50:
+ // Desired output: [Ok(1), Ok(11), Ok(1426), Ok(3)]
+ fn list_of_results() -> Vec<Result<i32, DivisionError>> {
+     let numbers = vec![27, 297, 38502, 81];
+-    numbers.into_iter() 
+-        .map(|n| divide(n, 27)) 
+-        .collect() 
++    numbers.into_iter().map(|n| divide(n, 27)).collect()
+ }
+ 
+ #[cfg(test)]
+
+
+// =====================================================
+//    Running cargo clippy...
+// =====================================================
+
+[!] Source code format check: FAILED
